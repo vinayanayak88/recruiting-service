@@ -4,7 +4,7 @@ Demonstrates a simple RESTful web service using Spring Boot. This web service pr
 
 
 ## Starting the Application
-To start this web service, install [Maven](https://maven.apache.org/install.html) and execute the following command
+To start this web service, install [Maven](https://maven.apache.org/install.html) and execute the following command. Need Java 8 or above
 
     mvn spring-boot:run
     
