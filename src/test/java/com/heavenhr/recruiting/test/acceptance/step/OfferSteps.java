@@ -15,7 +15,6 @@ import cucumber.api.java.en.When;
 
 public class OfferSteps extends AbstractSteps {
 	
-	//private static final String TEST_OFFER = "{\"description\": \"some test order\", \"lineItems\": [{\"name\": \"test item 1\", \"description\": \"some test item 1\", \"costInCents\": 100}, {\"name\": \"test item 2\", \"description\": \"some test item 2\", \"costInCents\": 200}]}";
 	private static final TypeReference<Map<String, Object>> RESOURCE_TYPE = new TypeReference<Map<String, Object>>() {};
 	private static final TypeReference<Map<String, Object>> RESOURCE_TYPE1 = new TypeReference<Map<String, Object>>() {};
 	private static final String TEST_OFFER = "{\"jobTitle\": \"Scala Developer\", \"startDate\": \"19/09/2017\"}";
@@ -28,20 +27,10 @@ public class OfferSteps extends AbstractSteps {
 	private void createOffer() throws Exception {
 		post("/offer", TEST_OFFER);
 	}
-	
-//	@When("^the user creates an offer$")
-//	public void theUserCallsGetOffers() throws Throwable {
-//		createOffer();
-//	}
-//	
+		
 	private Object getCreatedId() throws Exception {
 		return getLastPostContentAs(RESOURCE_TYPE).get("id");
 	}
-//	
-//	@And("^the offer is successfully created$")
-//	public void theOfferIsSuccessfullyCreated() {
-//		 Assert.assertEquals(201, getLastPostResponse().getStatus());
-//	}
 	
 	@And("^the user gets the created offer$")
 	public void theUserRetrievesTheOffer() throws Throwable {
