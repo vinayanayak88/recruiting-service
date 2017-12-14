@@ -1,9 +1,9 @@
-# Recruiting Process REST API 
+## Recruiting Service REST API 
 
 Demonstrates a simple RESTful web service using Spring Boot. This web service provides an in-memory offer and application management service, with the capability to get a single offer, get all offers, create an offer, create an application, get an application, progress the status of an application and notify when there is a status change.
 
 
-## Starting the Application
+### Starting the Application
 To start this web service, install [Maven](https://maven.apache.org/install.html) and execute the following command. Need Java 8 or above
 
     mvn spring-boot:run
@@ -12,7 +12,7 @@ Once the web service is started, it can be reached at
 
     http://localhost:8080/offer
 
-## REST Endpoints
+### REST Endpoints
 The following REST endpoints are available upon deployment of the application:
 
 1. list all offers.
@@ -87,17 +87,17 @@ The following REST endpoints are available upon deployment of the application:
 
 postman collection link - https://www.getpostman.com/collections/e031d5586b779dab0f59
 
-## Test cases
+### Test cases
 
 	mvn test
 
 
-## Design Decisions and assumptions made
+### Design Decisions and assumptions made
 + Used in-memory storage for storing the offers and application objects
 - Used Spring AOP(Aspect) for Logging the notification. `LoggingAspect.logAfterStatusUpdate` method will be triggered automatically whenever there is a change in the application status.
 - Integration/acceptance test cases are demonstrated for GET offer
 
-## Improvements 
+### Improvements 
 - test coverage
 + exception handling
 
